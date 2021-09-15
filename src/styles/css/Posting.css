@@ -1,0 +1,501 @@
+
+.post{
+    height: 100%;
+    background-color: #f9f3f1;
+}
+.loader {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    font-size: 30px;
+    white-space: pre-wrap;
+}
+.loader i {
+    animation: spin 2s linear infinite;
+}
+
+.postContainer{
+    background-color: #f9f3f1;
+    padding-top: 4em;
+    padding-bottom: 2.5em;
+    width: 100%;
+    position: relative;
+}
+.postContainer a{
+    text-decoration: none;
+}
+
+.postContainer li {
+    list-style-type: none;
+}
+
+/******** Header *********/
+.postHeader{
+    position: fixed;
+    width: 100%;
+    z-index: 101;
+    background-color: #f9f3f1;
+    box-sizing: border-box;
+    top: 0;
+}
+.postHeader.hide{
+    transition: .5s ease;
+    transform: translateY(-100%);
+}
+.post nav{
+    width: 100%;
+}
+.post nav button{
+    box-shadow: none;
+    border: none;
+    background-color: #f9f3f1;
+    cursor: pointer;
+}
+
+.post nav .navBtn{
+    display: inline-table;
+    text-align: center;
+}
+
+.post nav .home {
+    width: 8em;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+}
+.post nav .home i{
+    color: #184c5f;
+}
+.post nav .search, .post nav .share{
+    width: 2.2em;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.post nav .homeBtn{
+    padding-top : 1em;
+    padding-left: 2.5em;
+    padding-bottom : 1em;
+    float: left;
+}
+.post nav .searchBtn, .post nav .shareBtn{
+    width: 3.3em;
+    padding-top : 1em;
+    padding-right: 2.5em;
+    padding-bottom : 1em;
+    float: right;
+}
+
+/************* post 컨테이너 *****************/
+.postContainer .postBox{
+    margin: 3vh 6vw 3vh 6vw;
+    padding: 1em 1.2em 0.5em 1em;
+    border-radius: 12px;
+    box-shadow: 0 3px 0 0 rgba(0,0,0,0.16);
+    background: white;
+    min-width: 255px;
+}
+.postBox ul{
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+/************** userInfo ***********/
+.postBox .userInfo{
+    display: flex;
+    align-items: center;
+}
+.postBox .profileBox{
+    width: 30px;
+    height: 30px;
+    border-radius: 70%;
+    overflow: hidden;
+}
+.postBox .profileBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.postBox .userInfo span{
+    color: #184c5f;
+    font-family: 'Noto Sans CJK KR', sans-serif;
+    font-weight: 500;
+    font-size: calc(12px + (16 * ((100vw - 375px) / 1225)));
+    padding-left: 8px;
+    vertical-align: middle;
+}
+/************** postImg ***********/
+.postBox .postImg.hidden{
+    display: none;
+}
+.postBox .contentsBox{
+    position: relative;
+    overflow: hidden;
+    margin-top: 1em;
+    width: 100%;
+
+}
+.postBox .contentsBox:after{
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+.contentsBox img, .postList .contentsBox video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+.postBox .contentsBox p {
+    position: absolute;
+    z-index: 2;
+    right: 1em;
+    border-radius: 40px;
+    background-color: rgba(152, 152, 152, 0.7);
+    color: white;
+    padding: 1px 0.5em 1px 0.5em;
+}
+.postBox .contentsBox .hidden {
+    display: none;
+}
+
+/************** postContents ***********/
+.postBox .postContents{
+    margin-top: 0.7em;
+}
+.postBox .postContents span{
+    color: #dc4f0f;
+    font-family: 'Noto Sans CJK KR', sans-serif;
+    font-weight: 600;
+    font-size: calc(16px + (16 * ((100vw - 375px) / 1225)));
+}
+
+/************** postHashtags ***********/
+.postBox .postHashtags.hidden{
+    display: none;
+}
+.postBox .postHashtags{
+    margin-top: 0.9em;
+}
+.postBox .postHashtags ul{
+    display: flex;
+}
+.postBox .postHashtags ul li{
+    color: white;
+    font-family: 'Noto Sans CJK KR', sans-serif;
+    font-weight: 300;
+    font-size: calc(11px + (16 * ((100vw - 375px) / 1225)));
+    width: fit-content;
+    max-width: 120px;
+    max-height: 50px;
+    border-radius: 40px;
+    background-color : #ffb74d;
+    padding: 0.1em 0.5em  0.1em 0.5em;
+    margin-right: 0.5em;
+}
+.postBox .postHashtags ul .hidden{
+    display: none;
+}
+
+/************** postFooter ***********/
+.postBox .postLike ul{
+    padding-top: 0.9em;
+    font-family: 'Noto Sans CJK KR', sans-serif;
+    font-weight: 400;
+    font-size: calc(14px + (16 * ((100vw - 375px) / 1225)));
+    color: #989898;
+}
+.postList .postBox .postLike ul{
+    display: flex;
+
+}
+.postBox .postLike ul li{
+    display: flex;
+    justify-content: space-between;
+    width: 2em;
+    margin-right: 1em;
+}
+.postBox .postLike ul li img{
+    margin-right: 1px;
+}
+
+.postList .postBox .postFooter{
+    display: grid;
+    grid-template-columns: 70% 1fr;
+}
+.postDate{
+    font-weight: 500;
+    font-size: calc(13px + (16 * ((100vw - 375px) / 1225)));
+    font-family: 'Noto Sans CJK KR', sans-serif;
+    color: #989898;
+    position: relative;
+}
+.postDate p {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 0;
+}
+
+/**************************** Post Detail Css ***********/
+#postingDetail{
+    height: 100%;
+}
+
+.postDetail .postImg .swiper-button-next, .postDetail .postImg .swiper-button-prev{
+    opacity: 0;
+}
+.postDetail .postImg:hover .swiper-button-next{
+    opacity: 1;
+}
+.postDetail .postImg:hover .swiper-button-prev{
+    opacity: 1;
+}
+.postDetail .postImg:hover .swiper-button-next.swiper-button-disabled, .postDetail .postImg:hover .swiper-button-prev.swiper-button-disabled{
+    opacity: 0;
+}
+.postDetail .swiper-button-next, .postDetail .swiper-button-prev {
+    color: #184c5f;
+}
+
+.postDetail .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+
+    bottom: 0;
+    z-index: 100;
+}
+.postDetail .swiper-pagination-bullet {
+    width: 8px;
+    height: 4px;
+    background: #184c5f;
+    border: 1px solid #184c5f;
+    border-radius: 0;
+    opacity: 0.6;
+}
+.postDetail .swiper-pagination-bullet-active {
+    width: 15px;
+    transition: width .3s;
+    background: #184c5f;
+    border: 1px solid #184c5f;
+    opacity: 1;
+}
+
+.postDetail .contentsBox{
+    height: fit-content;
+    margin-bottom: 2em;
+}
+.postDetail .contentsBox img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.postDetail .contentsBox .video-js {
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+/************ video.js css *********************/
+.postDetail .contentsBox .video-js .vjs-big-play-button{
+    border: none;
+    background-color: transparent;
+    color: rgba(255,255,255,0.8);
+    font-size: 7em;
+}
+.postDetail .contentsBox .video-js .vjs-big-play-button:hover{
+    color: rgba(255,255,255,0.9);
+}
+
+.postDetail .postContents span{
+    font-weight:600;
+    font-size: calc(18px + (16 * ((100vw - 375px) / 1225)));
+}
+.postDetail .postDescription{
+    margin-top: 0.7em;
+}
+.postDetail .postDescription span{
+    color: #184c5f;
+    font-family: 'Noto Sans CJK KR', sans-serif;
+    font-weight: 400;
+    font-size: calc(15px + (16 * ((100vw - 375px) / 1225)));
+}
+.postDetail .postHashtags ul{
+    flex-wrap: wrap;
+}
+.postDetail .postHashtags ul li{
+    margin:  0.4em 0.5em 0.4em 0;
+    max-width: none;
+}
+.postDetail .hidden{
+    display: none;
+}
+.postDetail .postLink p{
+    margin: 0;
+}
+.postDetail .postLink p:last-child{
+    font-size: calc(12px + (16 * ((100vw - 375px) / 1225)));
+    font-weight: 400;
+}
+.postDetail .userInfo{
+    margin-top:1em;
+}
+.postDetail .userInfo .profileBox{
+    width: 40px;
+    height: 40px;
+}
+.postDetail .userInfo p{
+    margin:0;
+    color:#6d6c6c;
+}
+.postDetail .postFooter{
+    position: sticky;
+    z-index: 102;
+    bottom: 1em;
+    margin-top: 1.5em;
+    width: 100%;
+    text-align: center;
+}
+.postDetail .postFooter .postLike{
+    display: inline-block;
+    width: 100%;
+}
+.postDetail .likeBtn{
+    box-sizing: border-box;
+    border-radius: 40px;
+    border: 1px solid #989898;
+    background-color: white;
+    width: 30%;
+    height: fit-content;
+    padding: 0.2em 1.5em 0.2em 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.postDetail .likeBtn:hover{
+    background-color: #dc4f0f;
+    color: white;
+}
+.postDetail .collection{
+    float: left;
+}
+.postDetail .like{
+    float: left;
+    margin-left: 5%;
+}
+.postDetail .comment{
+    float: right;
+}
+.postDetail .likeBtn img{
+    width: calc(30px + (16 * ((100vw - 375px) / 1225)));;
+    max-width: 40px;
+    margin-right: 0.3em;
+}
+.postDetail .likeBtn p{
+    font-family: 'Noto Sans CJK KR', sans-serif;
+    font-weight: 400;
+    font-size: calc(14px + (16 * ((100vw - 375px) / 1225)));
+    color: #989898;
+    margin: 0 0 0 0.3em;
+    padding: 0;
+}
+/******************** media query ******************/
+@media (min-width: 700px){
+    .post{
+        text-align: center;
+        background-color: white;
+    }
+    .postContainer{
+        max-width: 700px;
+        display: inline-block;
+        z-index: 1;
+    }
+    .post .postHeader{
+        display: inline-block;
+        max-width: 700px;
+        background-color: white;
+    }
+    .post nav{
+        background-color: #f9f3f1;
+        width: 700px;
+        height: 70px;
+    }
+    .post nav img{
+        width: 18vw;
+    }
+    .postContainer .postBox {
+        margin: 3vh 8vw 3vh 8vw;
+    }
+    .postBox .userInfo span{
+        font-size: 16px;
+    }
+    .postBox .postContents span{
+        font-size: 18px;
+    }
+    .postBox .postDescription span{
+        font-size: 16px;
+    }
+    .postBox .postHashtags ul li{
+        font-size: 14px;
+    }
+    .postBox .linkBox p{
+        font-size: 16px;
+    }
+    .postBox .linkBox p:last-child{
+        font-size: 14px;
+    }
+    .postBox .userInfo .postDate{
+        font-size: 15px;
+    }
+    .postBox .postFooter .postLike li{
+        font-size: 16px;
+    }
+    .postBox .postFooter .postLike .likeBtn{
+        font-size: 10px;
+    }
+    .postBox .postFooter .postDate p{
+        font-size: 15px;
+    }
+    .postBox .postLike ul{
+        grid-template-columns: repeat(6, 1fr);
+    }
+    /************** PostDetail **************/
+
+    .postDetail .postDetailContainer{
+        display: inline-block;
+        width: 700px;
+        background-color: #f9f3f1;
+        height: 100%;
+    }
+    .postDetail .postFooter{
+        display: inline-block;
+    }
+    .postDetail .likeBtn p{
+        font-size: 16px;
+    }
+
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes smoothUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-5%);
+    }
+}

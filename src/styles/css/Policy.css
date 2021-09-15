@@ -1,0 +1,126 @@
+.policy{
+    background-color: #fafafa;
+}
+.policy .homeBtn{
+    top: 0;
+    background-color: white;
+    padding: 1em;
+    width: 100%;
+    border-bottom: 1px solid #efefef;
+}
+
+.policyContainer{
+    margin-top: 3em;
+    border: 1px solid #dbdbdb;
+    background-color: white;
+    max-width: 900px;
+}
+.policyBox{
+    display: flex;
+}
+.policy .policyContainer  h3{
+    font-family: 'Noto Sans CJK KR', sans-serif;
+    font-weight: 400;
+    font-size: calc(16px + (16 * ((100vw - 375px) / 1225)));
+    text-align: left;
+    border-bottom: 1px solid #efefef;
+    margin: 0;
+    padding: 1em;
+}
+
+.policyMenuList{
+    border-right: 1px solid #dbdbdb;
+    margin: 0;
+    padding: 2em;
+    flex: 0.2;
+}
+.policyMenuList ul{
+    padding: 0;
+}
+.policyMenuList ul li{
+    text-decoration: none;
+    list-style-type: none;
+    margin: 1em 0 1em 0;
+    padding-left: 0;
+    text-align: left;
+}
+
+.policy .policyBox .policyMenuList ul li a{
+    font-family: 'Noto Sans CJK KR', sans-serif;
+    font-weight: 400;
+    font-size: calc(11px + (16 * ((100vw - 375px) / 1225)));
+    background-color: white;
+    box-shadow: none;
+    border: none;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    text-overflow: ellipsis;
+}
+.policy .policyBox .policyMenuList ul li a:hover{
+    border-bottom: 1px solid lightgray;
+}
+
+.policyContents{
+    margin: 0;
+    padding: 0;
+    flex: 0.8;
+}
+iframe{
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: calc(100vh - 15em);
+    border: none;
+}
+
+
+.policy .hidden{
+    display: none;
+}
+@media screen and (min-width: 769px) {
+
+    .policy{
+        text-align: center;
+    }
+    .policy .policyContainer  h3{
+        font-size: 23px;
+    }
+
+    .policyContainer {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .policy header a{
+        max-width: 768px;
+    }
+    .policy .policyBox .policyMenuList ul li a{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .policy .policyContainer  h3{
+        font-size: 17px;
+    }
+
+    .policyMenuList{
+        padding: 0;
+    }
+    .policyBox{
+        display: flex;
+        flex-direction: column;
+    }
+    .policyMenuList{
+        border-bottom: 1px solid #efefef;
+    }
+    .policyMenuList ul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .policyMenuList ul li{
+        text-align: center;
+    }
+}

@@ -1,0 +1,163 @@
+.footer{
+    position: relative;
+    background-color: white;
+    box-sizing: border-box;
+    list-style-type: none;
+    height: 100%;
+}
+
+.footerContainer{
+    display: inline-block;
+    margin-top: 1em;
+    outline: none;
+    padding-left: 1.7em;
+    padding-bottom: 1em;
+}
+.footerContainer2 {
+    width: 100%;
+    background-color: #eee;
+    height: 100%;
+}
+
+.footerMenuList{
+    padding-bottom: 0.7rem;
+    padding-left: 0;
+    display: flex;
+    list-style-type: none;
+    border-bottom: 2px solid rgba(255,255,255,0.04);
+}
+.footerMenuList li:first-child{
+    margin-right: 1em;
+}
+
+.footerMenuList a{
+    box-shadow: none;
+    outline: none;
+    font-family: 'Noto Sans CJK KR', sans-serif;
+    font-weight: 400;
+    color: black;
+    font-size: calc(20px + (16 * ((100vw - 375px) / 1225)));
+    margin: 0.3em;
+    text-decoration: none;
+}
+.footerMenuList a:hover{
+    border-bottom: 1px solid lightgray;
+}
+.footerMenuList button{
+    box-shadow: none;
+    border: none;
+    font-family: 'Noto Sans CJK KR', sans-serif;
+    font-weight: 400;
+    color: black;
+    font-size: calc(20px + (16 * ((100vw - 375px) / 1225)));
+    text-decoration: none;
+    background-color: white;
+}
+.footerMenuList #modalContactBtn:hover{
+    border-bottom: 1px solid lightgray;
+}
+.footerMenuList .modal main button{
+    box-shadow: none;
+    border: none;
+    background-color: white;
+}
+
+.footerContainer .snsList{
+    padding-left: 0;
+    display: flex;
+    list-style-type: none;
+    border-bottom: 2px solid rgba(0,0,0,0.04);
+}
+.footerContainer .snsList li{
+    height: fit-content;
+}
+.footerContainer .snsList li:first-child{
+    margin-right: 2em;
+}
+
+.copyrightList{
+    max-width: 768px;
+    padding-top: 2rem;
+    padding-left: 1.5rem;
+    margin: 0;
+    color: black;
+}
+
+.copyrightList li{
+    list-style-type: none;
+    line-height: calc(26px + (8 * ((100vw - 375px) / 1225)));
+    white-space: pre-wrap;
+    font-size: calc(12px + (8 * ((100vw - 375px) / 1225)));
+}
+.downloadText{
+    font-family: 'Noto Sans CJK KR', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    width: 100%;
+    font-size: calc(27px + (16 * ((100vw - 375px) / 1225)));
+    letter-spacing: -1px;
+    line-height: calc(56px + (8 * ((100vw - 375px) / 1225)));
+    padding-top: 1em;
+}
+
+.downloadLink .fab, .snsList .fab{
+    color : black;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.footerContainer .downloadLink{
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
+}
+.footerContainer .downloadLink li:first-child{
+    margin-right: 1em;
+}
+.downloadLink a{
+    font-family: 'Noto Sans CJK KR', sans-serif;
+    font-weight: 200;
+    font-size: calc(16px + (16 * ((100vw - 375px) / 1225)));
+    color: gray;
+    text-decoration: none;
+    list-style-type: none;
+}
+.downloadLink a:hover{
+    border-bottom: 1px solid lightgray;
+}
+
+@media screen and (min-width: 700px) {
+
+    .footerContainer{
+        width: 700px;
+        text-align: center;
+        display: inline-block;
+    }
+    .footerContainer .downloadText{
+        font-size: 33px;
+    }
+    .footerContainer .downloadLink a{
+        font-size: 20px;
+    }
+    .footerContainer .footerMenuList button, .footerMenuList a{
+        font-size: 25px;
+    }
+    .copyListContainer{
+        max-width: 780px;
+        text-align: center;
+        display: inline-block;
+    }
+    .copyrightList, .footerMenuList, .snsList{
+        text-align: left;
+    }
+    .copyrightList{
+        vertical-align: middle;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .copyrightList li{
+        padding-right: 0.5em;
+        padding-left: 0.5em;
+        font-size: 14px;
+    }
+}

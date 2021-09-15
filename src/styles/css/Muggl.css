@@ -1,0 +1,283 @@
+#root { height: 100% }
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+.mugglBody .swiper-pagination{
+    z-index: 5;
+}
+
+/*********** 마지막 슬라이드일 때는 헤더와 네비게이션 없애기 *****************/
+.mugglBody .swiper-button-prev, .mugglBody .swiper-button-next{
+    display: none;
+}
+.mugglBody .swiper-button-next.swiper-button-disabled~header{
+    transform: translateY(-250%);
+    transition: ease-out 1s;
+    transition-delay: 1s;
+}
+
+.mugglBody .swiper-button-next.swiper-button-disabled~header{
+    transform: translateY(-250%);
+    transition: ease-out 1s;
+    transition-delay: 1s;
+}
+.mugglBody .swiper-button-next.swiper-button-disabled~header .appDownload{
+    display: none;
+}
+.mugglBody .swiper-button-next.swiper-button-disabled+.swiper-pagination{
+    animation: fadeOut 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+.mugglBody .swiper-button-prev.swiper-button-disabled~.swiper-pagination{
+    animation: fadeOut 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+
+.mugglBody .swiper-pagination i {
+    color: sandybrown;
+    font-size: 20px;
+}
+.mugglBody .swiper-container-vertical>.swiper-pagination-bullets {
+    right: 20px;
+}
+.mugglBody .swiper-pagination-bullet {
+    width: 15px;
+    height: 20px;
+    background: transparent;
+    opacity: 1;
+    position: relative;
+    z-index: 100;
+}
+.mugglBody .swiper-pagination-bullet .fa-cookie, .fa-cookie-bite{
+    position: absolute;
+    top:0;
+    left: 0;
+}
+.mugglBody .swiper-pagination-bullet-active {
+    background: transparent;
+    opacity: 1;
+}
+.mugglBody .swiper-pagination-bullet-active .fa-cookie{
+    transition: all .1s;
+    opacity: 0;
+}
+.mugglBody .swiper-pagination-bullet:hover .fa-cookie{
+    transition: all .1s;
+    opacity: 0;
+}
+
+
+@media screen and (min-width: 700px) {
+
+    .mugglBody{
+        text-align: center;
+    }
+    .swiper-slide .titleSlide .titleText{
+        text-align: center;
+    }
+
+    .titleText h1{
+        display: inline-block;
+        width: 700px;
+        font-size: 65px;
+    }
+    .aboutContents{
+        width: 700px;
+        display: inline-block;
+    }
+    .aboutContents .aboutText h1 {
+        font-size: 45px;
+    }
+    .aboutContents .aboutText p {
+        font-size: 18px;
+    }
+}
+
+
+body {
+    font-family: 'Noto Sans CJK KR', sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+.mugglBody{
+    background: #eee;
+}
+
+
+.headerSlide.swiper-slide-active .swiper-pagination {
+    display: none;
+}
+.titleSlide{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+
+.titleSlide .titleImg {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+.titleSlide .imgCover{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index:1;
+}
+
+.titleSlide .titleText{
+    position: absolute;
+    z-index: 2;
+    top: 10em;
+    width: 100%;
+}
+
+.titleText h1{
+    font-family: 'Noto Sans CJK KR', sans-serif;
+    font-weight: 600;
+    font-size: calc(50px + (16 * ((100vw - 375px) / 1225)));
+    line-height: 130%;
+    letter-spacing: -1px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    text-align: left;
+    color: white;
+    white-space: pre-wrap;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.bodySlide{
+    position: relative;
+    background-color: #dc4f0f;
+    z-index: 4;
+}
+.aboutContents{
+    object-fit: cover;
+    position: relative;
+    transition: .5s ease;
+}
+.aboutText{
+    font-family: 'Noto Sans CJK KR', sans-serif;
+    color: white;
+    letter-spacing: -1px;
+    width: 100%;
+    height: 100%;
+    padding-top: 9em;
+    padding-left: 1.7em;
+    padding-right: 1.7em;
+    text-align: left;
+}
+.aboutText h1 {
+    font-weight: 800;
+    font-size: calc(40px + (16 * ((100vw - 375px) / 1225)));
+    line-height: 130%;
+    white-space: pre-wrap;
+}
+.aboutText p{
+    font-weight: 300;
+    font-size: calc(13px + (16 * ((100vw - 375px) / 1225)));
+    line-height: 150%;
+    white-space: pre-wrap;
+}
+.aboutContents .aboutImg{
+    max-width: 375px;
+    width: 100%;
+    position: absolute;
+    margin-top: 0.5em;
+    transition: .5s ease;
+    transform: translateX(55%);
+    z-index: 1;
+    object-fit: contain;
+}
+.footerSlide .hiddenBar.headerBar{
+    position: absolute;
+    background-color: white;
+    padding-left: 10em;
+    z-index: 500;
+}
+.mugglBody .footerSlide .swiper-pagination{
+    display: none;
+}
+.hidden{
+    display: none;
+}
+
+/*******애니메이션 효과********/
+.downActive{
+    animation: smoothDown 2s;
+}
+.slideActive{
+    animation: slideImg 1s;
+}
+.appearActive{
+    animation: smoothAppear 2s;
+}
+.appearActiveDelay{
+    animation: smoothAppearDelay 1.5s;
+}
+@keyframes smoothDown {
+    from {
+        opacity: 0;
+        transform: translateY(-5%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes smoothAppear {
+    10% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 1;
+    }
+}
+@keyframes smoothAppearDelay {
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes slideImg {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(55%);
+    }
+}
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
