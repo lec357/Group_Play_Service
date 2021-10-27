@@ -2,7 +2,7 @@ import React from "react"
 import "../styles/css/User.css";
 import "../styles/css/Posting.css";
 import axios from "axios";
-import logo from "../assets/logo.png";
+import logo from "../assets/text_logo.png";
 import ContentLoader from "react-content-loader";
 
 import record from "../assets/record.png";
@@ -182,21 +182,20 @@ class User extends React.Component{
                                             <img src={userDetail.avatar !== undefined? userDetail.avatar : relaxing} alt={userDetail.nickname}/>
                                         </div>
                                         <ul className="userNum">
+                                            <li><p>Report</p>
+                                                <p onClick={()=> this.openModal(`${userDetail.nickname}님의 collection을 확인`) }>{userDetail.collect_num}</p></li>
                                             <li><p>Collection</p>
-                                                <p onClick={()=> this.openModal(`${userDetail.nickname}님의 collection을 확인하려면`) }>{userDetail.collect_num}</p></li>
-                                            <li><p>Followers</p>
-                                                <p onClick={()=> this.openModal(`${userDetail.nickname}님의 팔로워를 확인하려면`) }>{userDetail.follower_num}</p></li>
+                                                <p onClick={()=> this.openModal(`${userDetail.nickname}님의 팔로워를 확인`) }>{userDetail.follower_num}</p></li>
+                                            {/*
                                             <li><p>Following</p>
                                                 <p onClick={()=> this.openModal(`${userDetail.nickname}님이 팔로우하는 유저를 확인하려면`) }>{userDetail.following_num}</p></li>
+                                            */}
                                         </ul>
                                     </div>
                                     <div className="userInformation">
                                         <div className="userName">
                                             <span>{userDetail.firstName} {userDetail.lastName}</span>
                                             <p>@{userDetail.nickname}</p>
-                                        </div>
-                                        <div className="follow">
-                                            <button onClick={()=> this.openModal(`${userDetail.nickname}님을 팔로우하려면`) }>Follow</button>
                                         </div>
                                     </div>
                                     <div className="userIntro">
@@ -225,8 +224,8 @@ class User extends React.Component{
                             </div>
                         )}
                         {/***** 머글 다운로드 알림 모돨창 **********/}
-                        <Modal open={ this.state.modalOpen } close={ ()=> this.closeModal() } header="Taste Muggl Now">
-                            <p>{this.state.modalRequest} 머글을 다운받아주세요!!!</p>
+                        <Modal open={ this.state.modalOpen } close={ ()=> this.closeModal() } header="Play Ground">
+                            <p>{this.state.modalRequest} 구현 예정</p>
                         </Modal>
                     </div>
                     </body>

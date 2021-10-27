@@ -37,6 +37,9 @@ body {
     animation-delay: 2s;
     animation-fill-mode: forwards;
 }
+.mugglBody .swiper-button-prev.swiper-button-disabled~#headerBar nav .homeLogo{
+    color: mediumslateblue;
+}
 
 
 .mugglBody .swiper-pagination i {
@@ -164,7 +167,7 @@ body {
 
 .bodySlide{
     position: relative;
-    background-color: #dc4f0f;
+    background-color: mediumslateblue;
     z-index: 4;
 }
 .aboutContents{

@@ -6,17 +6,17 @@
     bottom: 0;
 }
 .userContent{
-    background-color: #f9f3f1;
+    background-color: #f6f5f9;
     width: 100%;
     height: 100%;
 }
 .userPage .homeBtn{
     text-align: left;
     padding: 2vh 6vw 0 6vw;
-    background-color: #f9f3f1;
+    background-color:  #f6f5f9;
 }
 .userContainer{
-    background-color: #f9f3f1;
+    background-color:  #f6f5f9;
     padding: 3em 6vw 6vh 6vw;
 }
 /************ userProfile ******************************/
@@ -128,8 +128,16 @@
     margin-right: 0.3em;
 }
 /************ myTasteIndex ******************************/
+
+.userPage .postContainer {
+    background-color: inherit;
+}
+
+.userPage  .myTasteContainer .postBox .postContents span {
+    color: #332955FF;
+}
 .myTasteContainer{
-    background-color: #f9f3f1;
+    background-color: #f6f5f9;
     height: 100%;
 }
 .myTasteContainer .myTasteIndex{
@@ -156,10 +164,10 @@
     font-weight: 400;
     font-family: 'Noto Sans CJK KR', sans-serif;
     font-size: calc(15px + (16 * ((100vw - 375px) / 1225)));
-    color: #707070;
+    color: lightcoral;
 }
 .myTasteContainer .myTasteIndex .record.active, .myTasteContainer .myTasteIndex .collect.active{
-    background-color: #dc4f0f;
+    background-color: lightcoral;
     color: white;
 }
 .userPage .myTasteContainer .postBox ul {

@@ -19,6 +19,14 @@
     padding-left: 1.7em;
     padding-bottom : 1em;
 }
+#headerBar nav .homeBtn a{
+    text-decoration: none;
+}
+#headerBar nav .homeLogo{
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+}
 
 #headerBar nav .goToPost{
     position: absolute;
@@ -97,6 +105,9 @@
         margin-right: 2rem;
         padding-top: 1em;
     }
+    #headerBar .snsList a:first-child{
+        opacity: 0;
+    }
 
     #headerBar nav i {
         color: white;
@@ -107,6 +118,7 @@
 
 
 .appDownload{
+    display: none;
     padding-left: 0.5em;
     position: fixed;
     top: 80%;

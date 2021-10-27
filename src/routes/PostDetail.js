@@ -224,15 +224,15 @@ class PostDetail extends React.Component{
                                     {/********** postFooter 수집, 좋아요, 댓글 버튼 *************/}
                                     <div className="postFooter">
                                         <div className="postLike">
-                                            <div className="collection likeBtn" onClick={()=> this.openModal("게시물을 수집하시려면") }>
+                                            <div className="collection likeBtn" onClick={()=> this.openModal("게시물을 수집") }>
                                                 <img src={collection} alt="collection"/>
                                                 <p>{postingDetail.count_bo}</p>
                                             </div>
-                                            <div className="like likeBtn" onClick={()=> this.openModal("좋아요를 표시하려면") }>
+                                            <div className="like likeBtn" onClick={()=> this.openModal("좋아요를 표시") }>
                                                 <img src={like} alt="like"/>
                                                 <p>{postingDetail.count_li}</p>
                                             </div>
-                                            <div className="comment likeBtn" onClick={()=> this.openModal("댓글을 남기시려면") }>
+                                            <div className="comment likeBtn" onClick={()=> this.openModal("댓글") }>
                                                 <img src={comment} alt="comment"/>
                                                 <p>{postingDetail.count_co}</p>
                                             </div>
@@ -244,8 +244,8 @@ class PostDetail extends React.Component{
                         {/******** 포스트 박스 끝 *************/}
                     </div>
                     {/*********** 모달창에 qr코드 또는 다운로드 링크 삽입 예정 ************/}
-                    <Modal open={ this.state.modalOpen } close={ ()=> this.closeModal() } header="Taste Muggl Now">
-                        <p>{this.state.modalRequest} 머글을 다운받아주세요!!!</p>
+                    <Modal open={ this.state.modalOpen } close={ ()=> this.closeModal() } header="Play Ground">
+                        <p>{this.state.modalRequest} 구현 예정!!!</p>
                     </Modal>
                 </div>
 

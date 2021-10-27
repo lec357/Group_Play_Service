@@ -9,8 +9,8 @@ const Header = () => {
 
     /******* 링크 선언*******/
     const link = {
-        youtubeUrl :"https://www.youtube.com/channel/UCJcgHFJhn_U1v6KKIhBlc4w",
-        instagramUrl : "https://www.youtube.com/channel/UCJcgHFJhn_U1v6KKIhBlc4w",
+        youtubeUrl :"https://www.youtube.com/",
+        instagramUrl : "https://about.instagram.com/",
         iosUrl : "https://apps.apple.com/",
         andUrl : "https://play.google.com/store/"
     };
@@ -23,19 +23,24 @@ const Header = () => {
             <nav>
                 <div className="homeBtn navBtn">
                     <Link to="/">
-                        <img src={logo} alt="home" height="30px"/></Link>
+                        {/*
+                        <img src={pg_logo} alt="home" height="30px"/>
+                        */}
+                        <p className="homeLogo">PlayGround</p>
+                        </Link>
+
                 </div>
                 <div className="goToPost">
-                    <Link to="/post">
+                    <Link to="/accounts/signin">
                         <i className="fas fa-paper-plane fa-2x"></i>
-                        <p>"Taste Now"</p>
+                        <p>"Play Now"</p>
                     </Link>
                 </div>
                 <div className="snsList navBtn">
                     <ul>
-                        <a href={link.youtubeUrl} rel="noopener" target="_blank"><i className="fab fa-youtube fa-3x"></i></a>
+                       {/* <a href={link.youtubeUrl} rel="noopener" target="_blank"><i className="fab fa-youtube fa-3x"></i></a>*/}
                         <a href={link.instagramUrl} rel="noopener" target="_blank"><i className="fab fa-instagram fa-3x"></i></a>
-                        <Link to="/post">
+                        <Link to="/accounts/signin">
                             <i className="fas fa-paper-plane fa-2x"></i>
                         </Link>
                     </ul>

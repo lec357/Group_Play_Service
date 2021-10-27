@@ -1,6 +1,6 @@
 .footer{
     position: relative;
-    background-color: white;
+    background-color: mediumslateblue;
     box-sizing: border-box;
     list-style-type: none;
     height: 100%;
@@ -12,6 +12,7 @@
     outline: none;
     padding-left: 1.7em;
     padding-bottom: 1em;
+    opacity: 0;
 }
 .footerContainer2 {
     width: 100%;

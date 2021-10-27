@@ -7,19 +7,19 @@ function Footer () {
 
     /******어플 다운로드 및 sns 주소 링크 선언*******/
     const link = {
-            youtubeUrl :"https://www.youtube.com/channel/UCJcgHFJhn_U1v6KKIhBlc4w",
-            instagramUrl : "https://www.youtube.com/channel/UCJcgHFJhn_U1v6KKIhBlc4w",
+            youtubeUrl :"https://www.youtube.com/",
+            instagramUrl : "https://about.instagram.com/",
             iosUrl : "https://apps.apple.com/",
             andUrl : "https://play.google.com/store/"
     };
 
     /****** 기본 정보들 내용 선언 *******/
     const info = {
-        compAddr : "서울특별시 성북구 한성대입구역(머글)",
-        compEmail : "muggl@specialorder.io",
+        compAddr : "서울특별시 성북구 서경대학교 (플레이그라운드)",
+        compEmail : "playground@skuniv.ac.kr",
         compNum : "",
         comRegNum: "",
-        copyright: "Copyright © Muggl Inc.  All Right Reserved",
+        copyright: "Copyright © PlayGround Inc.  All Right Reserved",
     }
 
     return(

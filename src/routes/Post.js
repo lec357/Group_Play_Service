@@ -8,6 +8,10 @@ import Modal from "../components/Modal/Modal";
 
 import logo from "../assets/logo.png";
 import MetaHelmet from "../components/MetaHelmet";
+import {Link} from "react-router-dom";
+import aboutImg from "../assets/light.png";
+import food from "../assets/muggl3.jpg";
+import sku from "../assets/sku.png";
 
 class Post extends React.Component{
 
@@ -34,6 +38,7 @@ class Post extends React.Component{
     }
 
 
+
     // api를 받아와서 해당 데이터를 저장하는 함수
     getPosting = async (tasteId) =>{
         await axios({
@@ -45,7 +50,7 @@ class Post extends React.Component{
             }
         })
             .then((response) => {
-                // console.log(response.data);
+                console.log(response.data);
                 console.log("성공 code: "+ response.data.code + " " + response.data.description);
                 this.setState({
                     isLoading: false,
@@ -120,14 +125,46 @@ class Post extends React.Component{
 
 
     render() {
+
+        const boards = [
+            {
+                id: 0,
+                boardName: "뭐먹을래",
+                boardDes: "맛집, 레시피, 요리 등 음식에 관한 공유방",
+                boardNum: 230,
+                boardImg: food,
+            },
+            {
+                id: 1,
+                boardName: "서경고 1-3 추억방",
+                boardDes: "서경고등학교 1-3 친구들 앨범용",
+                boardNum: 25,
+                boardImg: sku,
+            },
+            {
+                id: 2,
+                boardName: "우리가족",
+                boardDes: "2015년 부터 우리 가족 여행사진 모음",
+                boardNum: 4,
+                boardImg: null,
+            },
+            {
+                id: 3,
+                boardName: "2020 식단기록",
+                boardDes: "2020년 동안 식단 사진 기록용",
+                boardNum: 1,
+                boardImg: null,
+            },
+        ]
+
         const { location } = this.props;
 
         const {isLoading, posting} = this.state;
 
         // set Meta Datq
         const metaData = {
-            title: "Taste Now",
-            description: "머글이 궁금해? 머글을 시작해봐",
+            title: "Play Now",
+            description: "Play in playground",
             image: logo,
             canonical: location.pathname
         }
@@ -147,21 +184,26 @@ class Post extends React.Component{
                     <div className={this.state.hide ? 'postHeader hide' : 'postHeader'}>
                         <nav>
                             <div className="homeBtn navBtn">
-                                <button onClick={() => window.scrollTo(0,0)}><img className="home" src={logo} alt="home"/></button>
-                            </div>
-                            <div className="searchBtn navBtn">
-                                <button onClick={()=> this.openModal("더 많은 게시물을 검색하시려면") }>
-                                    <img className="search" src={search}  alt="search"/>
+                                <button onClick={() => window.scrollTo(0,0)}>
+                                    {/*
+                                    <img className="home" src={logo} alt="home"/>
+                                    */}
+                                    <p className="toHomeLogo">PlayGround</p>
                                 </button>
                             </div>
+                            {/*<div className="searchBtn navBtn">
+                                <button onClick={()=> this.openModal("게시물을 검색하시려면") }>
+                                    <img className="search" src={search}  alt="search"/>
+                                </button>
+                            </div>*/}
                         </nav>
                     </div>
                     {/***** 머글 다운로드 알림 모돨창 **********/}
-                    <Modal open={ this.state.modalOpen } close={ ()=> this.closeModal() } header="Taste Muggl Now">
-                        <p>{this.state.modalRequest} 머글을 다운받아주세요!!!</p>
+                    <Modal open={ this.state.modalOpen } close={ ()=> this.closeModal() } header="Play Ground">
+                        <p>{this.state.modalRequest} 구현예정</p>
                     </Modal>
                     {/************* 포스팅 박스 시작 **************/}
-                    <div className="postContainer">
+                    <div className="postContainer pgrndPost">
                         {/**************** api 받아왔을 때 ****** */}
                         {
                             posting.map(ps => (
@@ -183,8 +225,38 @@ class Post extends React.Component{
                                 </Posting>
                             ))
                         }
-                         {/* **************** api 받아왔을 때 *******/}
+                        {/* **************** api 받아왔을 때 *******/}
                     </div>
+                    {/************* 포스팅그룹 박스 시작 **************/}
+                    <div className="postGroupContainer">
+                        {
+                            boards.map(board => (
+                                <section className="boardBox postBox">
+                                    <Link  to={{
+                                        pathname: "/post",
+                                        state:
+                                            {
+
+                                            }
+                                    }}>
+                                        <div className="boardList">
+                                            <div className="boardImg">
+                                                <img src={board.boardImg !== null? board.boardImg : aboutImg}
+                                                     width="40px" alt="aboutImg" />
+                                            </div>
+                                            <ul className="boarding posting">
+                                                <li className="boardName">{board.boardName}</li>
+                                                <li className="boardDesNum">
+                                                    <span  className="boardDes">{board.boardDes}</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </Link>
+                                </section>
+                            ))
+                        }
+                    </div>
+
                     </body>
                 )}
             </div>

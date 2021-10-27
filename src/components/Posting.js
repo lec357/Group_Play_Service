@@ -9,7 +9,7 @@ import qs from "qs";
 import collection from "../assets/collection.png";
 import like from "../assets/like.png";
 import comment from "../assets/comment.png";
-import relaxing from "../assets/relaxing.svg";
+import relaxing from "../assets/light.png";
 
 function Posting (props) {
 

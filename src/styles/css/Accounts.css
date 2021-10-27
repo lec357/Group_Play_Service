@@ -1,0 +1,84 @@
+.signContainer {
+    background-color: #fafafa;
+    text-align: center;
+    height: auto;
+}
+.signContainer .signBox{
+    display: inline-block;
+    max-width: 20em;
+    box-sizing: content-box;
+    border: 1px solid #dbdbdb;
+    border-radius: 18px;
+    background: white;
+    padding: 2em 5em 2em 5em;
+    margin: 3em 0 3em 0;
+}
+.signContainer .signBox .signTitle{
+    color: mediumslateblue;
+    font-size: calc(25px + (16 * ((100vw - 375px) / 1225)));
+}
+.signContainer .signBox .signInput{
+    display: inline-block;
+    margin-top: 1em;
+    text-align: left;
+}
+.signInput h5{
+    margin-bottom: 0;
+    color: #999696FF;
+    font-size: calc(13px + (16 * ((100vw - 375px) / 1225)));
+}
+.signInput input{
+    border: 1px solid #dbdbdb;
+    height: 3em;
+    width: 100%;
+}
+.signInput .signupInput{
+    margin-top: 0.5em;
+}
+.signBox .submit{
+    margin-top: 3em;
+}
+.signBox .submit button{
+    background-color: mediumslateblue;
+    color: white;
+    border: none;
+    border-radius: 18px;
+    padding:  0.5em 2em 0.5em 2em;
+    font-weight: 500;
+}
+.signBox .submit button:hover{
+    cursor: pointer;
+}
+.goToSign{
+    padding-bottom: 2em;
+    font-size: calc(11px + (16 * ((100vw - 375px) / 1225)));
+}
+.goToSign a{
+    text-decoration: none;
+    color: #2789AAFF;
+    font-weight: 500;
+    padding-left: 0.5em;
+    font-size: calc(13px + (16 * ((100vw - 375px) / 1225)));
+}
+
+/******************** media query ******************/
+@media (min-width: 700px){
+    .signContainer .signBox{
+        width: 20em;
+    }
+    .signContainer .signBox .signTitle{
+        font-size: 30px;
+    }
+    .signContainer .signBox .signInput{
+        width: 20em;
+    }
+    .signInput h5{
+        font-size: 17px;
+    }
+    .goToSign{
+        font-size: 15px;
+    }
+    .goToSign a{
+        font-size: 17px;
+    }
+}

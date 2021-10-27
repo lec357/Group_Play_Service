@@ -35,6 +35,11 @@ const Clipboard  = (props) => {
             <button onClick={() => copyText(copiedText)}><img className="share" src={share} alt="share"/></button>
         );
     }
+    else if(copyImage === 'shareGroup'){
+        return (
+            <button onClick={() => copyText(copiedText)}>그룹 초대</button>
+        );
+    }
 }
 
 export default Clipboard;

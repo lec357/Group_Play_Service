@@ -1,0 +1,141 @@
+.board{
+    background-color: #fafafa;
+    text-align: center;
+}
+.boardHeader{
+    background-color: white;
+    width: 100%;
+    height: 5em;
+    border-bottom: 1px solid #dbdbdb;
+    position: fixed;
+    z-index: 50;
+}
+.boardHeader nav{
+    display: flex;
+    justify-content: space-between;
+}
+.boardHeader nav .homeBtn{
+    padding-left: 3em;
+    padding-top: 1em;
+}
+.boardHeader nav .homeBtn button{
+    border: none;
+    background-color: white;
+}
+.boardHeader .toHomeLogo{
+    color: mediumslateblue;
+    font-weight: 800;
+    font-size: calc(20px + (16 * ((100vw - 375px) / 1225)));
+    margin: 0;
+}
+.boardHeader nav .addBtn{
+    padding-right: 4em;
+    padding-top: 1.5em;
+    display: flex;
+}
+.boardHeader nav .addBtn .pg_userInfo{
+    display: flex;
+}
+.boardHeader nav .addBtn .pg_userInfo div, .boardHeader nav .addBtn .pg_userInfo a{
+    padding-right: 1em;
+}
+.boardHeader nav .addBtn i{
+    color: #6d6d6d;
+}
+.boardHeader nav .addBtn i:hover{
+    color: mediumslateblue;
+}
+
+.boardBox.postBox{
+    background: #f3f1f6;
+    border: 1px solid #dbdbdb;
+    padding: 1em;
+}
+.boardBox.postBox:hover{
+    background: #E0BDBDFF;
+}
+.boardContainer.postContainer{
+    background: #fafafa;
+    /*
+    border-right: 1px solid #dbdbdb;
+    border-left: 1px solid #dbdbdb;
+
+     */
+}
+
+.board.addBoard{
+    text-align: center;
+}
+.board.addBoard .signBox{
+    padding-top: 8em;
+    max-width: 700px;
+}
+.board.addBoard .signBox .signInput div{
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    align-items: center;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+.board.addBoard .signBox .signInput span{
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.board.addBoard .signBox .signInput input{
+    border-radius: 8px;
+}
+.board.addBoard .signBox .signInput input:first-child{
+    text-align: right;
+}
+
+/*////////////////////////////////////////////////////////*/
+.board.sample{
+    margin-top: 20em;
+}
+
+.board.post.postList{
+    height: 100%;
+}
+.boardBox.postBox{
+    text-decoration: none;
+}
+.boardContainer.postContainer{
+    padding-top: 6em;
+    height: 100%;
+}
+.boardList{
+    display: grid;
+    grid-template-columns: 1fr 3fr 0.1fr;
+}
+.boardList .boardImg{
+    width: 70px;
+    height: 70px;
+    border-radius: 70%;
+    overflow: hidden;
+    background-color: white;
+}
+.boardList .boardImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.posting.boarding .boardName{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+.posting.boarding .boardDesNum{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1em;
+}
+.posting.boarding .boardDes, .posting.boarding .boardNum{
+    font-size: 13px;
+    color: black;
+}
+.posting.boarding button{
+    border: none;
+    background-color: white;
+}

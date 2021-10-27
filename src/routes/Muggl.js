@@ -13,6 +13,7 @@ import myprofile from "../assets/myprofile.png";
 import muggl3 from "../assets/muggl3.jpg";
 import relaxing from "../assets/relaxing.svg";
 import logo from "../assets/logo.png";
+import pg_logo from "../assets/pg_logo.png";
 // import Header 및  Footer
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
@@ -30,20 +31,20 @@ class Muggl extends React.Component {
         const about = [
             {
                 id: 0,
-                aboutMain: "맛있는 것은 정말\n참을 수 없어 ><",
-                aboutSub: "머글은 음식들을 찍고 공유 가능한 음식 아카이빙 어플입니다.\n맛있는 음식, 나만의 레시피, 유행하는 음식 챌린지!\n모두 모아 손 안에서 간편하게 확인하세요.",
+                aboutMain: "프라이빗한 공유 sns 서비스",
+                aboutSub: "친구들과, 가족들과 또는 같은 관심사를 가진 사람들과 함께\n프라이빗한 공간을 만들어보세요.\n초대코드를 이용하여 우리의 공간으로 사람들을 초대하세요!",
                 aboutImg: home,
             },
             {
                 id: 1,
-                aboutMain: "오늘 먹을 음식\nMuggl 어때 ?",
-                aboutSub: "저녁에 뭐 먹을지 고민 되나요? 여행 가서 맛집을 찾으시나요?\n광고 없는 찐 맛집을 찾고 싶을 때!!\n지금 바로 머글에 접속하세요.",
+                aboutMain: "간편한 사용",
+                aboutSub: "여러 개의 그라운드에 참여하여 보세요.\n다양한 장르, 유용한 정보를 얻어갈 수 있습니다.",
                 aboutImg: myprofile,
             },
             {
                 id: 2,
-                aboutMain: "머글's JMT\n찍고, 먹고, 탁 올리고",
-                aboutSub: "손쉬운 업로드로 당신의 맛집을 추천하고\n사람들의 공감을 얻어보세요.\n당신은 이미 Mugglr~!!!",
+                aboutMain: "온택트 놀이터",
+                aboutSub: "비대면 생활의 비중이 늘어가면서 온라인에서 모임이 많아졌습니다.\n플레이그라운드로 모여서 안전하고 즐거운 시간을 보내세요!!",
                 aboutImg: relaxing,
             },
         ]
@@ -51,19 +52,13 @@ class Muggl extends React.Component {
         /***** 메인 표지에 삽입 될 제목들 ******/
         const main = [
             {
-                title: "안녕하세요 머글입니다.\n뭐머글래?",
+                title: "손쉬운 그룹 모임",
             },
             {
-                title: "머글?\n가보자고",
+                title: "Join us :)",
             },
             {
-                title: "와글와글\n머글머글",
-            },
-            {
-                title: "Tasty Food\nTake Muggl !!!",
-            },
-            {
-                title: "Eat delicious food and\nBe happy :)",
+                title: "관심사 별로 유용하게 모아모아",
             },
         ]
         /*****랜덤으로 표지 문구 구하기********/
@@ -71,8 +66,8 @@ class Muggl extends React.Component {
 
         // set Meta Datq
         const metaData = {
-            title: "Tasty Food Take Muggl",
-            description: "오늘 먹을 음식 Muggl 어때",
+            title: "PlayGround",
+            description: "프라이빗한 공유 서비스",
             image: logo,
             canonical: location.pathname
         }
@@ -107,7 +102,7 @@ class Muggl extends React.Component {
                         <SwiperSlide className="headerSlide" >
                             {({ isActive }) => (
                                 <div className="titleSlide">
-                                    <img className="titleImg" src={muggl3} alt="muggl3"/>
+                                    <img className="titleImg" src={pg_logo} alt="pg_logo"/>
                                     <div className={isActive ? "titleText downActive" : "titleText"}>
                                         <h1>{titlePick.title}</h1>
                                     </div>
